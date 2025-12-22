@@ -1,0 +1,276 @@
+/* =======================
+   GLOBAL STYLES
+======================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #eef2f5;
+    color: #333;
+}
+
+/* Background with blur */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("bg.jpg") no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* =======================
+   HEADER + NAVBAR
+======================= */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a3d62;
+    color: white;
+    padding: 15px 20px;
+}
+
+.header-left,
+.header-right {
+    width: 60px;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+.header-center h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.subtitle {
+    margin-top: 4px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #08304d;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   INTRO SECTION
+======================= */
+.intro {
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =======================
+   GRID & CARD DESIGN
+======================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 12px 12px 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.card p {
+    padding: 10px 12px 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =======================
+   LOGIN PAGE
+======================= */
+.login-body {
+    height: 100vh;
+    background: linear-gradient(to right, #1e90ff, #00bcd4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Show password alignment */
+.show-pass {
+    margin: 10px 0;
+}
+
+.show-pass label {
+    display: flex;
+    text-align: left;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.show-pass input {
+    margin: 0;
+}
+
+/* FORGOT PASSWORD */
+.forgot-password {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: #0a3d62;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.login-card {
+    background: white;
+    padding: 30px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-card .sub-text {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-actions {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.login-actions a {
+    text-decoration: none;
+    color: #0a3d62;
+}
+
+.login-actions a:hover {
+    text-decoration: underline;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background: #0a3d62;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background: #062b45;
+}
+
+#error {
+    color: red;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* =======================
+   RESPONSIVE (MOBILE)
+======================= */
+@media (max-width: 600px) {
+    .header-center h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+
+    .navbar a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .card img {
+        height: 160px;
+    }
+}
